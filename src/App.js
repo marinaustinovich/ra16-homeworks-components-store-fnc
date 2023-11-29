@@ -1,4 +1,5 @@
 import "./App.css";
+import { ShopItemClassBased } from "./components/ShopItemClassBased.jsx";
 import { ShopItemFunc } from "./components/ShopItemFunc";
 import { Item } from "./models/Item.js";
 
@@ -14,15 +15,26 @@ const App = () => {
   });
 
   return (
-    <div className="container">
-      <div className="background-element"></div>
-      <div className="highlight-window">
-        <div className="highlight-overlay"></div>
+    <>
+      <div className="container">
+        <div className="background-element"></div>
+        <div className="highlight-window">
+          <div className="highlight-overlay"></div>
+        </div>
+        <div className="window">
+          <ShopItemFunc item={item} />
+        </div>
       </div>
-      <div className="window">
-        <ShopItemFunc item={item} />
+      <div className="container">
+        <div className="background-element"></div>
+        <div className="highlight-window">
+          <div className="highlight-overlay"></div>
+        </div>
+        <div className="window">
+          <ShopItemClassBased item={item} />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
